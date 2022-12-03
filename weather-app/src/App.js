@@ -28,20 +28,35 @@ function App() {
     fetchWeather();
   }, [query, units])
 
+  
+  const bgChange = () => {
+    if (!weather) return 'bg-main';
+    if(weather.temp< 5 )
+      return 'bg-snow';
+    if(weather.temp>25)
+      return 'bg-sunny';
+    return 'bg-haze';
+  
+  }
+
   return (
-    <div className='mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-cyan-500 '>
-
-      <TopButtons setQuery={setQuery}/>
-      <Input setQuery={setQuery} units={units} setUnits={setUnits} />
-      {weather && (
-        <div>
-          <TimeLocation weather={weather} />
-          <TempAndDetail weather={weather} />
-
-          <Forecast title="hourly forecast" items={weather.hourly}/>
-          <Forecast title="daily forecast" items={weather.daily}/>
-        </div>
-      )}
+    <div className={`w-full h-full ${bgChange()} bg-cover , bg-no-repeat py-5`}>
+      <div className='mx-auto  w-3/5 py-5 px-32
+      bg-white bg-opacity-20 
+      backdrop-blur-xl rounded drop-shadow-lg
+      bg-slate-600' >
+        <TopButtons setQuery={setQuery}/>
+        <Input setQuery={setQuery} units={units} setUnits={setUnits} />
+        {weather && (
+          <div>
+            <TimeLocation weather={weather} />
+            <TempAndDetail weather={weather} />
+            
+            <Forecast title="hourly forecast" items={weather.hourly}/>
+            <Forecast title="daily forecast" items={weather.daily}/>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

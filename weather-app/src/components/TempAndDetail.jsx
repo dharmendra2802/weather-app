@@ -21,20 +21,22 @@ function TempAndDetail({weather: {
     }
  }) {
   return (
-    <div className='flex flex-col justify-center items-center'>
-        <div className='flex items-center justify-center py-6 text-xl text-cyan-800'>
+
+
+    <div className='flex flex-col justify-center items-center '>
+        <div className='flex items-center justify-center py-1 text-2xl font-bold tracking-widest text-white'>
             <p>{details}</p>
         </div>
 
-        <div className='flex flex-row items-center justify-between text-white py-3  w-3/5'>
+        <div className='flex flex-row items-center space-around  text-white w-9/12 py-3  w-3/5'>
             <img 
             src={iconUrlFromCode(icon)}
             alt="icon" 
-            className='w-20'/>
+            className='w-22'/>
             
-            <p className='text-5xl'> {`${temp.toFixed()}`}&deg;</p>
+            <p className='text-5xl mx-2'> {`${temp.toFixed()}`}&deg;</p>
 
-            <div className='flex flex-col space-y-2 '>
+            <div className='flex flex-col space-y-2 items-start'>
                 <div className='flex font-light text-sm items-center justify-center'>
                     <UilTemperature size={18} className="mr-1" />
                     Real feel :

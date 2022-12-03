@@ -32,7 +32,7 @@ function Input({setQuery , units , setUnits}) {
 
   return (
     <div className='flex flex-row justify-center my-6'>
-        <div className='flex flex-row w-3/4 items-center justify-center space-x-2'>
+        <div className='ml-10 flex flex-row w-3/4 items-center justify-center space-x-2'>
             <input 
             value= {city}
             onChange={(e) => setCity(e.currentTarget.value)}
