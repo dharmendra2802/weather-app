@@ -2,10 +2,15 @@
 ## sem -4 minor project web app using react
  
  its a weather web application buitl using the frontend library of Javascript - **React**
+ 
  it shows today and coming 4 days weather infomation like
+ 
  min temp 
+ 
  max temp 
+ 
  humidy 
+ 
  wind speed and such
  
  For current day it gives additional info such as
