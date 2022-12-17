@@ -13,8 +13,10 @@
  
  wind speed and such
  
- For current day it gives additional info such as
+ #For current day it gives additional info such as
+ 
  sunrise 
+ 
  sunset
  
  For styling part we used the CSS framework - **Tailwind**
